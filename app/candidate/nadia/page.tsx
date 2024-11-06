@@ -8,7 +8,6 @@ import nadia1 from "@/public/images/Nadia/1.jpg";
 import nadia2 from "@/public/images/Nadia/2.jpg";
 import nadia3 from "@/public/images/Nadia/3.jpg";
 import { X } from "lucide-react";
-import { Maven_Pro } from "next/font/google";
 import { Separator } from "@/components/ui/separator";
 
 import {
@@ -19,10 +18,8 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 import { AiFillInstagram, AiFillTikTok } from "react-icons/ai";
-import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-
-const mavenPro = Maven_Pro({ subsets: ["latin"] });
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function Farah() {
 	useEffect(() => {
@@ -74,21 +71,32 @@ export default function Farah() {
 					style={{ y: y }}
 					className="col-span-1 md:col-span-5 relative h-full flex items-center justify-center bg-[#bb3030] p-4"
 				>
-					<Image
-						src={nadia1}
-						alt="image"
-						width={500}
-						height={500}
-						className="object-contain bg-black rounded-xl md:h-[50vh] w-fit"
-						style={{ boxShadow: "rgba(0, 0, 0, 0.4) 0px 30px 90px" }}
-					/>
+					<Dialog>
+						<DialogTrigger>
+							<Image
+								src={nadia1}
+								alt="image"
+								width={500}
+								height={500}
+								className="object-contain bg-black rounded-xl md:h-[50vh] w-fit transform transition-transform duration-300 ease-in-out hover:scale-110"
+								style={{ boxShadow: "rgba(0, 0, 0, 0.4) 0px 30px 90px" }}
+							/>
+						</DialogTrigger>
+						<DialogContent>
+							<Image
+								src={nadia1}
+								alt="image"
+								width={500}
+								height={500}
+								className="object-contain border-black border-2 rounded-xl"
+							/>
+						</DialogContent>
+					</Dialog>
 				</motion.div>
 			</div>
 
 			<div className="flex justify-center my-40">
-				<p
-					className={`${mavenPro.className} antialiased text-[10vw] md:text-[7.5vw] uppercase text-center max-w-[60vw] md:max-w-[50vw] leading-none`}
-				>
+				<p className="text-[10vw] md:text-[7.5vw] uppercase text-center max-w-[60vw] md:max-w-[50vw] leading-none">
 					Nurul Nadia Husna binti Anuar
 				</p>
 			</div>
@@ -103,24 +111,50 @@ export default function Farah() {
 						className="col-span-7 flex items-center justify-center md:p-10 p-4 gap-4"
 					>
 						<Carousel>
-							<CarouselContent className="md:pt-0 pt-32">
+							<CarouselContent className="md:pt-0 pt-32 md:px-0 px-8">
 								<CarouselItem className="md:basis-1/2">
-									<Image
-										src={nadia2}
-										alt="image"
-										className="object-cover rounded-xl"
-										width={500}
-										height={500}
-									/>
+									<Dialog>
+										<DialogTrigger className="p-3">
+											<Image
+												src={nadia2}
+												alt="image"
+												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
+												width={500}
+												height={500}
+											/>
+										</DialogTrigger>
+										<DialogContent>
+											<Image
+												src={nadia2}
+												alt="image"
+												className="object-contain border-black border-2 rounded-xl"
+												width={500}
+												height={500}
+											/>
+										</DialogContent>
+									</Dialog>
 								</CarouselItem>
 								<CarouselItem className="md:basis-1/2">
-									<Image
-										src={nadia3}
-										alt="image"
-										className="object-cover rounded-xl"
-										width={500}
-										height={500}
-									/>
+									<Dialog>
+										<DialogTrigger className="p-3">
+											<Image
+												src={nadia3}
+												alt="image"
+												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
+												width={500}
+												height={500}
+											/>
+										</DialogTrigger>
+										<DialogContent>
+											<Image
+												src={nadia3}
+												alt="image"
+												className="object-contain border-black border-2 rounded-xl"
+												width={500}
+												height={500}
+											/>
+										</DialogContent>
+									</Dialog>
 								</CarouselItem>
 							</CarouselContent>
 							<CarouselPrevious />
@@ -180,7 +214,15 @@ export default function Farah() {
 								TikTok
 							</h2>
 						</div>
-						<blockquote
+						<div className="w-full flex justify-center">
+							<iframe
+								className="w-full max-w-[780px] min-w-[288px] h-[400px] md:h-[470px] rounded-lg"
+								src="https://www.tiktok.com/embed/@cunerrs?is_from_webapp=1&sender_device=pc"
+								frameBorder="0"
+								allowFullScreen
+							></iframe>
+						</div>
+						{/* <blockquote
 							className="tiktok-embed max-w-[780px] min-w-[288px] rounded-lg"
 							cite="https://www.tiktok.com/@cunerrs"
 							data-unique-id="cunerrs"
@@ -194,7 +236,7 @@ export default function Farah() {
 									@cunerrs
 								</Link>
 							</section>
-						</blockquote>
+						</blockquote> */}
 					</div>
 				</div>
 			</div>

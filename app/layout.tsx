@@ -3,14 +3,23 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Script from "next/script";
+import Loader from "@/components/loader";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
 	title: "Your FSKTM Candidate",
-	description: "FSKTM Candidate Website",
+	description:
+		"Meet and support the future leaders of FSKTM - your trusted student representatives.",
+	icons: {
+		icon: [
+			{
+				url: "/images/yfc-logo.png",
+				href: "/images/yfc-logo.png",
+			},
+		],
+	},
 };
-<script async src="https://www.tiktok.com/embed.js"></script>;
 
 export default function RootLayout({
 	children,
@@ -21,9 +30,13 @@ export default function RootLayout({
 		<html lang="en">
 			<head>
 				<Script src="https://www.tiktok.com/embed.js" strategy="afterInteractive" />
-				<Script src="https://www.instagram.com/embed.js" strategy="afterInteractive" />
+				<Script
+					src="https://www.instagram.com/embed.js"
+					strategy="afterInteractive"
+				/>
 			</head>
 			<body className={`${poppins.className} antialiased`}>
+				<Loader />
 				<Navbar />
 				{children}
 			</body>

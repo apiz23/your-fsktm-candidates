@@ -22,14 +22,14 @@ export default function Home() {
 			>
 				<div className="grid grid-cols-12">
 					<div className="md:col-span-6"></div>
-					<div className="col-span-12 md:col-span-6 max-w-5xl pt-44 md:pt-36">
+					<div className="col-span-12 md:col-span-6 max-w-5xl pt-28 md:pt-36">
 						<div className="block justify-end">
 							<Image
 								src={fsktmlogo}
 								alt="logo"
 								width={600}
 								height={300}
-								className="w-fit mx-auto mb-10"
+								className="w-fit mx-auto mb-14"
 							/>
 							<h1 className="scroll-m-20 uppercase text-4xl font-extrabold tracking-tight lg:text-5xl text-center">
 								Fsktm Mpp Candidate

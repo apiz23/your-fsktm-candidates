@@ -7,7 +7,6 @@ import Image from "next/image";
 import zuhayra1 from "@/public/images/Zuhayra/1.jpg";
 import zuhayra2 from "@/public/images/Zuhayra/2.jpg";
 import { InstagramIcon, X } from "lucide-react";
-import { Maven_Pro } from "next/font/google";
 import { Separator } from "@/components/ui/separator";
 
 import {
@@ -18,8 +17,8 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
-
-const mavenPro = Maven_Pro({ subsets: ["latin"] });
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { AiFillTikTok } from "react-icons/ai";
 
 export default function Farah() {
 	useEffect(() => {
@@ -56,7 +55,7 @@ export default function Farah() {
 				ref={container}
 				className="h-screen overflow-hidden grid grid-cols-1 md:grid-cols-10 gap-4 bg-[#bb3030]"
 			>
-				<div className="pt-20 md:pt-0 col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-3 px-20 md:flex items-center justify-center text-black bg-[#f18989]">
+				<div className="pt-20 md:pt-0 col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-3 px-10 md:px-20 md:flex items-center justify-center text-black bg-[#f18989]">
 					<h1 className="col-span-1 text-center text-3xl md:text-5xl lg:text-7xl w-fit md:max-w-[30vw] font-bold md:text-left space-y-3">
 						Believe in Progress, Believe in Zuhayra
 					</h1>
@@ -71,21 +70,32 @@ export default function Farah() {
 					style={{ y: y }}
 					className="col-span-1 md:col-span-5 relative h-full flex items-center justify-center bg-[#bb3030] p-4"
 				>
-					<Image
-						src={zuhayra1}
-						alt="image"
-						width={500}
-						height={500}
-						className="object-contain bg-black rounded-xl md:h-[50vh] w-fit"
-						style={{ boxShadow: "rgba(0, 0, 0, 0.4) 0px 30px 90px" }}
-					/>
+					<Dialog>
+						<DialogTrigger>
+							<Image
+								src={zuhayra1}
+								alt="image"
+								width={500}
+								height={500}
+								className="object-contain bg-black rounded-xl md:h-[50vh] w-fit transform transition-transform duration-300 ease-in-out hover:scale-110"
+								style={{ boxShadow: "rgba(0, 0, 0, 0.4) 0px 30px 90px" }}
+							/>
+						</DialogTrigger>
+						<DialogContent>
+							<Image
+								src={zuhayra1}
+								alt="image"
+								width={500}
+								height={500}
+								className="object-contain border-black border-2 rounded-xl"
+							/>
+						</DialogContent>
+					</Dialog>
 				</motion.div>
 			</div>
 
 			<div className="flex justify-center my-40">
-				<p
-					className={`${mavenPro.className} antialiased text-[10vw] md:text-[7.5vw] uppercase text-center max-w-[60vw] md:max-w-[50vw] leading-none`}
-				>
+				<p className="text-[10vw] md:text-[7.5vw] uppercase text-center max-w-[60vw] md:max-w-[50vw] leading-none">
 					Zuhayra Nasrin Binti Ardad
 				</p>
 			</div>
@@ -100,15 +110,28 @@ export default function Farah() {
 						className="col-span-6 flex items-center justify-center md:p-10 p-4 gap-4"
 					>
 						<Carousel>
-							<CarouselContent className="md:pt-0 pt-32">
+							<CarouselContent className="md:pt-0 pt-32 md:px-0 px-8">
 								<CarouselItem>
-									<Image
-										src={zuhayra2}
-										alt="image"
-										className="object-cover rounded-xl"
-										width={500}
-										height={500}
-									/>
+									<Dialog>
+										<DialogTrigger className="p-3">
+											<Image
+												src={zuhayra2}
+												alt="image"
+												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
+												width={500}
+												height={500}
+											/>
+										</DialogTrigger>
+										<DialogContent>
+											<Image
+												src={zuhayra2}
+												alt="image"
+												className="object-contain border-black border-2 rounded-xl"
+												width={500}
+												height={500}
+											/>
+										</DialogContent>
+									</Dialog>
 								</CarouselItem>
 							</CarouselContent>
 							<CarouselPrevious />
@@ -147,23 +170,41 @@ export default function Farah() {
 				</div>
 			</div>
 			<div className="min-h-screen bg-slate-300 pt-32 md:px-0 px-4 md:pb-0 pb-10">
-				<div className="max-w-4xl mx-auto grid grid-cols-1 gap-4">
-					<h1 className="text-center scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-10">
-						Get to Know Your Candidate Better
-					</h1>
-					<div className="flex gap-5">
-						<InstagramIcon className="h-10 w-10" />
-						<h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] inline-block text-transparent bg-clip-text">
-							Instagram
-						</h2>
+				<h1 className="text-center scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-10">
+					Get to Know Your Candidate Better
+				</h1>
+				<div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-2 pb-20">
+					<div className="col-span-1">
+						<div className="flex gap-5 mb-5">
+							<InstagramIcon className="h-10 w-10" />
+							<h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] inline-block text-transparent bg-clip-text">
+								Instagram
+							</h2>
+						</div>
+						<div className="overflow-hidden relative w-full h-[400px] md:h-[470px] rounded-lg">
+							<iframe
+								src="https://www.instagram.com/nsrii.in/embed"
+								style={{ width: "100%", height: "100%", border: "none" }}
+								title="Instagram Profile"
+								allowTransparency={true}
+							/>
+						</div>
 					</div>
-					<div className="overflow-hidden relative w-full h-[400px] md:h-[600px] rounded-lg">
-						<iframe
-							src="https://www.instagram.com/nsrii.in/embed"
-							style={{ width: "100%", height: "100%", border: "none" }}
-							title="Instagram Profile"
-							allowTransparency={true}
-						/>
+					<div className="col-span-1 md:mt-0 mt-10">
+						<div className="flex gap-5 mb-3">
+							<AiFillTikTok className="h-10 w-10" />
+							<h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 bg-gradient-to-r from-[#69C9D0] via-[#010101] to-[#EE1D52] inline-block text-transparent bg-clip-text">
+								TikTok
+							</h2>
+						</div>
+						<div className="w-full flex justify-center">
+							<iframe
+								className="w-full max-w-[780px] min-w-[288px] h-[400px] md:h-[470px] rounded-lg"
+								src="https://www.tiktok.com/embed/@nsrii.in?is_from_webapp=1&sender_device=pc"
+								frameBorder="0"
+								allowFullScreen
+							></iframe>
+						</div>
 					</div>
 				</div>
 			</div>

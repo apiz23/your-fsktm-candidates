@@ -8,7 +8,6 @@ import farah3 from "@/public/images/Farah/3.jpg";
 import farah4 from "@/public/images/Farah/4.jpg";
 import bgFarah from "@/public/images/Farah/bg.jpg";
 import { X } from "lucide-react";
-import { Poppins } from "next/font/google";
 import { Separator } from "@/components/ui/separator";
 
 import {
@@ -19,10 +18,8 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 import { AiFillTikTok, AiFillInstagram } from "react-icons/ai";
-import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-
-const mavenPro = Poppins({ subsets: ["latin"], weight: ["400"] });
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function Farah() {
 	useEffect(() => {
@@ -44,7 +41,7 @@ export default function Farah() {
 		offset: ["start start", "end start"],
 	});
 
-	const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
+	const y = useTransform(scrollYProgress, [0, 1.2], ["0vh", "150vh"]);
 
 	const container1 = useRef<HTMLDivElement>(null);
 	const { scrollYProgress: scrollYProgress1 } = useScroll({
@@ -59,7 +56,7 @@ export default function Farah() {
 				ref={container}
 				className="h-screen overflow-hidden grid grid-cols-1 md:grid-cols-10 gap-4 bg-[#77a3a9]"
 			>
-				<div className="pt-20 md:pt-0 col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-3 px-20 md:flex items-center justify-center bg-[#a9bcbe]">
+				<div className="pt-20 md:pt-0 col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-3 px-10 md:px-20 md:flex items-center justify-center bg-[#a9bcbe]">
 					<h1 className="col-span-1 text-center text-3xl md:text-5xl lg:text-7xl w-fit md:max-w-[30vw] font-bold md:text-left tracking-wide space-y-3">
 						Vote for Progress, Vote for Farah
 					</h1>
@@ -74,21 +71,32 @@ export default function Farah() {
 					style={{ y: y }}
 					className="col-span-1 md:col-span-5 relative h-full flex items-center justify-center bg-[#77a3a9] p-4"
 				>
-					<Image
-						src={bgFarah}
-						alt="image"
-						width={500}
-						height={500}
-						className="object-contain bg-black rounded-xl md:h-[50vh] w-fit"
-						style={{ boxShadow: "rgba(0, 0, 0, 0.4) 0px 30px 90px" }}
-					/>
+					<Dialog>
+						<DialogTrigger>
+							<Image
+								src={bgFarah}
+								alt="image"
+								width={500}
+								height={500}
+								className="object-contain bg-black rounded-xl md:h-[50vh] w-fit transform transition-transform duration-300 ease-in-out hover:scale-110"
+								style={{ boxShadow: "rgba(0, 0, 0, 0.4) 0px 30px 90px" }}
+							/>
+						</DialogTrigger>
+						<DialogContent>
+							<Image
+								src={bgFarah}
+								alt="image"
+								width={500}
+								height={500}
+								className="object-contain border-black border-2 rounded-xl"
+							/>
+						</DialogContent>
+					</Dialog>
 				</motion.div>
 			</div>
 
 			<div className="flex justify-center my-40">
-				<p
-					className={`${mavenPro.className} antialiased font-bold text-[10vw] md:text-[7.5vw] uppercase text-center max-w-[60vw] md:max-w-[50vw] leading-none`}
-				>
+				<p className="font-bold text-[10vw] md:text-[7.5vw] uppercase text-center max-w-[60vw] md:max-w-[50vw] leading-none">
 					FARAH HAZWANIE BINTI ISMAIL
 				</p>
 			</div>
@@ -103,24 +111,50 @@ export default function Farah() {
 						className="col-span-7 flex items-center justify-center md:p-10 p-4 gap-4"
 					>
 						<Carousel>
-							<CarouselContent className="md:pt-0 pt-32">
+							<CarouselContent className="md:pt-0 pt-32 md:px-0 px-8">
 								<CarouselItem className="md:basis-1/2">
-									<Image
-										src={farah3}
-										alt="image"
-										className="object-cover rounded-xl"
-										width={500}
-										height={500}
-									/>
+									<Dialog>
+										<DialogTrigger className="p-3">
+											<Image
+												src={farah3}
+												alt="image"
+												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
+												width={500}
+												height={500}
+											/>
+										</DialogTrigger>
+										<DialogContent>
+											<Image
+												src={farah3}
+												alt="image"
+												className="object-contain border-black border-2 rounded-xl"
+												width={500}
+												height={500}
+											/>
+										</DialogContent>
+									</Dialog>
 								</CarouselItem>
 								<CarouselItem className="md:basis-1/2">
-									<Image
-										src={farah4}
-										alt="image"
-										className="object-cover rounded-xl"
-										width={500}
-										height={500}
-									/>
+									<Dialog>
+										<DialogTrigger className="p-3">
+											<Image
+												src={farah4}
+												alt="image"
+												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
+												width={500}
+												height={500}
+											/>
+										</DialogTrigger>
+										<DialogContent>
+											<Image
+												src={farah4}
+												alt="image"
+												className="object-contain border-black border-2 rounded-xl"
+												width={500}
+												height={500}
+											/>
+										</DialogContent>
+									</Dialog>
 								</CarouselItem>
 							</CarouselContent>
 							<CarouselPrevious />
@@ -189,7 +223,15 @@ export default function Farah() {
 								TikTok
 							</h2>
 						</div>
-						<blockquote
+						<div className="w-full flex justify-center">
+							<iframe
+								className="w-full max-w-[780px] min-w-[288px] h-[400px] md:h-[470px] rounded-lg"
+								src="https://www.tiktok.com/embed/@farahzwnie?is_from_webapp=1&sender_device=pc"
+								frameBorder="0"
+								allowFullScreen
+							></iframe>
+						</div>
+						{/* <blockquote
 							className="tiktok-embed max-w-[780px] min-w-[288px] rounded-lg"
 							cite="https://www.tiktok.com/@farahzwnie"
 							data-unique-id="farahzwnie"
@@ -203,7 +245,7 @@ export default function Farah() {
 									@farahzwnie
 								</Link>
 							</section>
-						</blockquote>
+						</blockquote> */}
 					</div>
 				</div>
 			</div>

@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type NavProps = {
 	onLinkClick: () => void;
@@ -20,7 +20,7 @@ export default function Navbar() {
 		<>
 			<div
 				onClick={() => setIsActive(!isActive)}
-				className="fixed right-0 m-5 z-50 w-20 h-20 rounded-full bg-blue-600 cursor-pointer flex items-center justify-center"
+				className="fixed right-0 m-5 z-40 w-20 h-20 rounded-full bg-[#4A628A] cursor-pointer flex items-center justify-center border-2 border-black"
 			>
 				<div className={`relative w-full ${isActive ? "burger-active" : ""}`}>
 					<div
@@ -60,6 +60,10 @@ function Nav({ onLinkClick }: NavProps) {
 	const pathname = usePathname();
 	const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
+	useEffect(() => {
+		setSelectedIndicator(pathname);
+	}, [pathname]);
+
 	const menuSlide = {
 		initial: { opacity: 0, x: 100 },
 		enter: { opacity: 1, x: 0 },
@@ -79,12 +83,14 @@ function Nav({ onLinkClick }: NavProps) {
 					onMouseLeave={() => setSelectedIndicator(pathname)}
 					className="flex flex-col mt-20 text-3xl md:text-5xl gap-3"
 				>
-					<div className="uppercase text-gray-500 border-b border-gray-500 mb-10 text-5xl">
+					<div className="uppercase text-gray-500 border-b border-gray-500 mb-10 text-2xl md:text-5xl">
 						<p>Candidate</p>
 					</div>
 					<Link
 						href={`${process.env.NEXT_PUBLIC_BASE_URL}/`}
-						className={`text-white font-light text-lg md:text-4xl  mb-5 hover:underline`}
+						className={`text-white font-light text-lg md:text-5xl mb-5 hover:underline ${
+							selectedIndicator === "/" ? "font-bold underline" : ""
+						}`}
 						onMouseEnter={() => setSelectedIndicator("/")}
 						onClick={onLinkClick}
 					>
@@ -95,8 +101,8 @@ function Nav({ onLinkClick }: NavProps) {
 						<Link
 							href={`${process.env.NEXT_PUBLIC_BASE_URL}/candidate/${data.href}`}
 							key={index}
-							className={`text-white font-light text-lg md:text-4xl mb-5 hover:underline ${ 	
-								selectedIndicator === data.href ? "font-bold" : ""
+							className={`text-white font-light text-lg md:text-5xl mb-5 hover:underline ${
+								selectedIndicator.includes(data.href) ? "font-bold underline" : ""
 							}`}
 							onMouseEnter={() => setSelectedIndicator(data.href)}
 							onClick={onLinkClick}
