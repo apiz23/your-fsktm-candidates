@@ -146,7 +146,7 @@ export default function Farah() {
 					</div>
 				</div>
 			</div>
-			<div className="min-h-screen bg-slate-300 pt-20 md:px-0 px-4">
+			<div className="min-h-screen bg-slate-300 pt-32 md:px-0 px-4 md:pb-0 pb-10">
 				<div className="max-w-4xl mx-auto grid grid-cols-1 gap-4">
 					<h1 className="text-center scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-10">
 						Get to Know Your Candidate Better

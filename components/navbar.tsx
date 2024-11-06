@@ -74,17 +74,17 @@ function Nav({ onLinkClick }: NavProps) {
 			exit="exit"
 			className="fixed top-0 right-0 h-screen md:w-[30vw] w-3/4 bg-black text-white z-30"
 		>
-			<div className="box-border h-full py-24 px-14 flex flex-col justify-between">
+			<div className="box-border h-full py-20 px-14 flex flex-col justify-between">
 				<div
 					onMouseLeave={() => setSelectedIndicator(pathname)}
 					className="flex flex-col mt-20 text-3xl md:text-5xl gap-3"
 				>
-					<div className="uppercase text-gray-500 border-b border-gray-500 mb-10">
+					<div className="uppercase text-gray-500 border-b border-gray-500 mb-10 text-5xl">
 						<p>Candidate</p>
 					</div>
 					<Link
 						href={`${process.env.NEXT_PUBLIC_BASE_URL}/`}
-						className={`text-white font-light text-2xl md:text-5xl mb-5 hover:underline`}
+						className={`text-white font-light text-lg md:text-4xl  mb-5 hover:underline`}
 						onMouseEnter={() => setSelectedIndicator("/")}
 						onClick={onLinkClick}
 					>
@@ -95,7 +95,7 @@ function Nav({ onLinkClick }: NavProps) {
 						<Link
 							href={`${process.env.NEXT_PUBLIC_BASE_URL}/candidate/${data.href}`}
 							key={index}
-							className={`text-white font-light text-2xl md:text-5xl mb-5 hover:underline ${
+							className={`text-white font-light text-lg md:text-4xl mb-5 hover:underline ${ 	
 								selectedIndicator === data.href ? "font-bold" : ""
 							}`}
 							onMouseEnter={() => setSelectedIndicator(data.href)}

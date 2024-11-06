@@ -22,7 +22,7 @@ export default function Home() {
 			>
 				<div className="grid grid-cols-12">
 					<div className="md:col-span-6"></div>
-					<div className="col-span-12 md:col-span-6 max-w-5xl pt-52 md:pt-36">
+					<div className="col-span-12 md:col-span-6 max-w-5xl pt-44 md:pt-36">
 						<div className="block justify-end">
 							<Image
 								src={fsktmlogo}
@@ -34,8 +34,8 @@ export default function Home() {
 							<h1 className="scroll-m-20 uppercase text-4xl font-extrabold tracking-tight lg:text-5xl text-center">
 								Fsktm Mpp Candidate
 							</h1>
-							<div className="max-w-2xl mx-auto my-6">
-								<h3 className="scroll-m-20 text-lg text-gray-700 font-normal text-center tracking-tight">
+							<div className="max-w-2xl mx-auto my-6 rounded-lg bg-black p-4 bg-opacity-60">
+								<h3 className="scroll-m-20 text-xl text-gray-300 font-normal text-center tracking-tight">
 									Representing FSKTM as candidates for UTHM{"'"}s student council, dedicated
 									to supporting and empowering our faculty community.
 								</h3>

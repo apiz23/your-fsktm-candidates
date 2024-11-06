@@ -161,11 +161,11 @@ export default function Farah() {
 					</div>
 				</div>
 			</div>
-			<div className="min-h-screen bg-slate-300 pt-44 md:px-0 px-4 md:pb-0 pb-10">
+			<div className="min-h-screen bg-slate-300 pt-32 md:px-0 px-4 md:pb-0 pb-10">
 				<h1 className="text-center scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-20">
 					Get to Know Your Candidate Better
 				</h1>
-				<div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-20">
+				<div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-2 pb-20">
 					<div className="col-span-1">
 						<div className="flex gap-5 mb-3">
 							<AiFillInstagram className="h-10 w-10" />
@@ -182,7 +182,7 @@ export default function Farah() {
 							/>
 						</div>
 					</div>
-					<div className="col-span-1">
+					<div className="col-span-1 md:mt-0 mt-10">
 						<div className="flex gap-5 mb-3">
 							<AiFillTikTok className="h-10 w-10" />
 							<h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 bg-gradient-to-r from-[#69C9D0] via-[#010101] to-[#EE1D52] inline-block text-transparent bg-clip-text">
