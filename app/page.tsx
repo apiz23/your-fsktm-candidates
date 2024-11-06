@@ -17,7 +17,7 @@ export default function Home() {
 				/>
 			</header>
 			<div
-				className="min-h-screen md:p-0 p-4 bg-cover bg-right md:bg-center backdrop-blur-lg"
+				className="min-h-screen md:p-0 p-4 bg-cover bg-no-repeat bg-right md:bg-center"
 				style={{ backgroundImage: `url(${fsktmbg.src})` }}
 			>
 				<div className="grid grid-cols-12">
@@ -28,14 +28,14 @@ export default function Home() {
 								src={fsktmlogo}
 								alt="logo"
 								width={600}
-								height={300}
-								className="w-fit mx-auto mb-14"
+								height={600}
+								className="mx-auto mb-14"
 							/>
-							<h1 className="scroll-m-20 uppercase text-4xl font-extrabold tracking-tight lg:text-5xl text-center">
+							<h1 className="scroll-m-20 uppercase text-3xl font-extrabold tracking-tight lg:text-5xl text-center">
 								Fsktm Mpp Candidate
 							</h1>
-							<div className="max-w-2xl mx-auto my-6 rounded-lg bg-black p-4 bg-opacity-60">
-								<h3 className="scroll-m-20 text-xl text-gray-300 font-normal text-center tracking-tight">
+							<div className="max-w-2xl mx-auto my-6 rounded-lg bg-black p-4 bg-opacity-40">
+								<h3 className="scroll-m-20 text-lg text-neutral-200 font-normal text-center tracking-tight">
 									Representing FSKTM as candidates for UTHM{"'"}s student council, dedicated
 									to supporting and empowering our faculty community.
 								</h3>

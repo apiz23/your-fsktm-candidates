@@ -19,6 +19,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { AiFillTikTok } from "react-icons/ai";
+import SparklesText from "@/components/ui/sparkles-text";
 
 export default function Farah() {
 	useEffect(() => {
@@ -55,15 +56,15 @@ export default function Farah() {
 				ref={container}
 				className="h-screen overflow-hidden grid grid-cols-1 md:grid-cols-10 gap-4 bg-[#bb3030]"
 			>
-				<div className="pt-20 md:pt-0 col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-3 px-10 md:px-20 md:flex items-center justify-center bg-[#a9bcbe]">
-					<h1 className="col-span-1 text-center text-3xl md:text-5xl lg:text-7xl w-fit md:max-w-[30vw] font-bold md:text-left tracking-wide space-y-3">
-						Believe in Progress, Believe in Zuhayra
+				<div className="pt-20 md:pt-0 col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-3 px-10 md:px-20 md:flex items-center justify-center bg-[#eb8787]">
+					<h1 className="col-span-1 capitalize text-center text-5xl lg:text-7xl w-fit md:max-w-[30vw] font-bold md:text-left tracking-wide space-y-3">
+						Progress? Believe in Zuhayra
 					</h1>
 					<Separator
 						orientation="vertical"
 						className="mx-10 md:flex hidden h-[20vh] bg-gray-700 w-[2px]"
 					/>
-					<X className="col-span-1 h-20 md:h-32 w-20 md:w-32 text-gray-800 border-b-2 border-gray-600 mx-auto" />
+					<X className="col-span-1 h-20 md:h-32 w-20 md:w-32 text-gray-800 md:border-t-0 border-t-2 border-gray-600 mx-auto" />
 				</div>
 
 				<motion.div
@@ -95,9 +96,12 @@ export default function Farah() {
 			</div>
 
 			<div className="flex justify-center my-40">
-				<p className="text-[10vw] md:text-[7.5vw] uppercase text-center max-w-[60vw] md:max-w-[50vw] leading-none">
-					Zuhayra Nasrin Binti Ardad
-				</p>
+				<SparklesText
+					text="Zuhayra Nasrin Binti Ardad"
+					sparklesCount={20}
+					colors={{ first: "#C62E2E", second: "#D76C82" }}
+					className="text-[10vw] md:text-[7.5vw] uppercase text-center max-w-[60vw] md:max-w-[50vw] leading-none"
+				/>
 			</div>
 			<div
 				ref={container1}
@@ -142,7 +146,7 @@ export default function Farah() {
 					<div className="col-span-6 md:flex md:flex-col justify-center text-center px-10">
 						<div className="uppercase space-y-4 mb-10 text-white">
 							<p className="text-[8vw] md:text-[3vw] text-center font-bold ">
-								Inspire Your Desire
+								Inspire Your Desire 💪
 							</p>
 							<p className="text-[4vw] md:text-[2vw] font-semibold">Code: 103</p>
 						</div>
