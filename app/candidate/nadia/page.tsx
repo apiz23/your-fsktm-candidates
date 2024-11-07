@@ -7,6 +7,7 @@ import Image from "next/image";
 import nadia1 from "@/public/images/Nadia/1.jpg";
 import nadia2 from "@/public/images/Nadia/2.jpg";
 import nadia3 from "@/public/images/Nadia/3.jpg";
+import nadia4 from "@/public/images/Nadia/4.jpg";
 import { X } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -152,6 +153,28 @@ export default function Farah() {
 										<DialogContent>
 											<Image
 												src={nadia3}
+												alt="image"
+												className="object-contain border-black border-2 rounded-xl"
+												width={500}
+												height={500}
+											/>
+										</DialogContent>
+									</Dialog>
+								</CarouselItem>
+								<CarouselItem className="md:basis-1/2">
+									<Dialog>
+										<DialogTrigger className="p-3">
+											<Image
+												src={nadia4}
+												alt="image"
+												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
+												width={500}
+												height={500}
+											/>
+										</DialogTrigger>
+										<DialogContent>
+											<Image
+												src={nadia4}
 												alt="image"
 												className="object-contain border-black border-2 rounded-xl"
 												width={500}
