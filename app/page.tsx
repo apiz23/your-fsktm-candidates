@@ -103,7 +103,7 @@ export default function Home() {
 				<div className="max-w-5xl pt-36 mx-auto">
 					<div className="block justify-end">
 						<SparklesText
-							text="Fsktm Mpp Candidate"
+							text="Fsktm SRC Candidates"
 							className="scroll-m-20 uppercase md:text-5xl text-4xl font-extrabold tracking-wide lg:text-7xl text-center px-10"
 						/>
 						<div className="max-w-2xl mx-auto my-6">
