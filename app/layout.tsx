@@ -10,7 +10,8 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 export const metadata: Metadata = {
 	title: "Your FSKTM Candidate",
 	description:
-		"Meet and support the future leaders of FSKTM - your trusted student representatives.",
+		"Meet and support the future leaders from FSKTM - your trusted student representatives.",
+	viewport: "width=device-width, initial-scale=1",
 	icons: {
 		icon: [
 			{
