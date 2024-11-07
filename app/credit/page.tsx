@@ -26,7 +26,7 @@ export default function Credit() {
 
 				<div className="flex flex-col items-center text-center">
 					<Link
-						href="https://www.linkedin.com/in/your-username"
+						href="https://www.linkedin.com/in/muh-hafizuddin"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="text-4xl text-blue-700 hover:text-blue-900 transition-colors"
