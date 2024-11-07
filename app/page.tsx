@@ -99,12 +99,12 @@ export default function Home() {
 					/>
 				</ContainerScroll>
 			</div>
-			<div className="min-h-screen bg-gradient-to-t from-slate-300 via-red-100 to-blue-400">
+			<div className="min-h-screen bg-gradient-to-t from-slate-300 via-red-100 to-blue-400 p-4">
 				<div className="max-w-5xl pt-36 mx-auto">
 					<div className="block justify-end">
 						<SparklesText
 							text="Fsktm Mpp Candidate"
-							className="scroll-m-20 uppercase text-5xl font-extrabold tracking-wide lg:text-7xl text-center px-20"
+							className="scroll-m-20 uppercase md:text-5xl text-4xl font-extrabold tracking-wide lg:text-7xl text-center px-10"
 						/>
 						<div className="max-w-2xl mx-auto my-6">
 							<h3 className="scroll-m-20 text-lg text-neutral-700 font-normal text-center tracking-tight">
@@ -125,8 +125,10 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="text-center my-20">
-						<h2 className="text-5xl font-bold">Countdown to Election Day</h2>
-						<div className="flex justify-center mt-6 space-x-4 text-lg font-semibold">
+						<h2 className="md:text-5xl text-4xl font-bold">
+							Countdown to Election Day
+						</h2>
+						<div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center mt-6 text-lg font-semibold px-2">
 							<div className="p-4 bg-white shadow-md rounded-lg">
 								{timeLeft.days} <span className="block text-sm">Days</span>
 							</div>
