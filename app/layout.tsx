@@ -30,6 +30,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head>
+				<link rel="icon" href="/images/yfc.logo.png" />
 				<Script src="https://www.tiktok.com/embed.js" strategy="afterInteractive" />
 				<Script
 					src="https://www.instagram.com/embed.js"
