@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 	icons: {
 		icon: [
 			{
-				url: "/images/yfc-logo.png",
-				href: "/images/yfc-logo.png",
+				url: "/favicon.ico",
+				href: "/favicon.ico",
 			},
 		],
 	},
@@ -30,7 +30,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head>
-				<link rel="icon" href="/images/yfc.logo.png" />
+				<link rel="icon" href="/favicon.ico" />
 				<Script src="https://www.tiktok.com/embed.js" strategy="afterInteractive" />
 				<Script
 					src="https://www.instagram.com/embed.js"
