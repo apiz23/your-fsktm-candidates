@@ -7,7 +7,7 @@ import Image from "next/image";
 import zuhayra1 from "@/public/images/Zuhayra/1.jpg";
 import zuhayra2 from "@/public/images/Zuhayra/2.jpg";
 import zuhayra3 from "@/public/images/Zuhayra/3.jpg";
-import { InstagramIcon, X } from "lucide-react";
+import { X } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 import {
@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { AiFillTikTok } from "react-icons/ai";
+import { AiFillInstagram, AiFillTikTok } from "react-icons/ai";
 import SparklesText from "@/components/ui/sparkles-text";
 
 export default function Farah() {
@@ -205,12 +205,12 @@ export default function Farah() {
 				<div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-2 pb-20">
 					<div className="col-span-1">
 						<div className="flex gap-5 mb-5">
-							<InstagramIcon className="h-10 w-10" />
+							<AiFillInstagram className="h-10 w-10" />
 							<h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] inline-block text-transparent bg-clip-text">
 								Instagram
 							</h2>
 						</div>
-						<div className="overflow-hidden relative w-full h-[400px] md:h-[470px] rounded-lg">
+						<div className="overflow-hidden relative w-full h-[400px] md:h-[470px] border-4 border-black rounded-lg">
 							<iframe
 								src="https://www.instagram.com/nsrii.in/embed"
 								style={{ width: "100%", height: "100%", border: "none" }}
@@ -226,7 +226,7 @@ export default function Farah() {
 								TikTok
 							</h2>
 						</div>
-						<div className="w-full flex justify-center">
+						<div className="w-full flex justify-center border-4 border-black rounded-lg">
 							<iframe
 								className="w-full max-w-[780px] min-w-[288px] h-[400px] md:h-[470px] rounded-lg"
 								src="https://www.tiktok.com/embed/@nsrii.in?is_from_webapp=1&sender_device=pc"

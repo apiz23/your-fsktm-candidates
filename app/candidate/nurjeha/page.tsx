@@ -236,7 +236,7 @@ export default function Farah() {
 								Instagram
 							</h2>
 						</div>
-						<div className="overflow-hidden relative w-full h-[400px] md:h-[470px] rounded-lg">
+						<div className="overflow-hidden relative w-full h-[400px] md:h-[470px] border-4 border-black rounded-lg">
 							<iframe
 								src="https://www.instagram.com/_nrjeha/embed"
 								style={{ width: "100%", height: "100%", border: "none" }}
@@ -252,7 +252,7 @@ export default function Farah() {
 								TikTok
 							</h2>
 						</div>
-						<div className="w-full flex justify-center">
+						<div className="w-full flex justify-center border-4 border-black rounded-lg">
 							<iframe
 								className="w-full max-w-[780px] min-w-[288px] h-[400px] md:h-[470px] rounded-lg"
 								src="https://www.tiktok.com/embed/@_nrjeha?is_from_webapp=1&sender_device=pc"
