@@ -143,7 +143,7 @@ export default function Farah() {
 									<Dialog>
 										<DialogTrigger className="p-3">
 											<Image
-												src={nadia3}
+												src={nadia4}
 												alt="image"
 												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
 												width={500}
@@ -152,7 +152,7 @@ export default function Farah() {
 										</DialogTrigger>
 										<DialogContent>
 											<Image
-												src={nadia3}
+												src={nadia4}
 												alt="image"
 												className="object-contain border-black border-2 rounded-xl"
 												width={500}
@@ -165,7 +165,7 @@ export default function Farah() {
 									<Dialog>
 										<DialogTrigger className="p-3">
 											<Image
-												src={nadia4}
+												src={nadia3}
 												alt="image"
 												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
 												width={500}
@@ -174,7 +174,7 @@ export default function Farah() {
 										</DialogTrigger>
 										<DialogContent>
 											<Image
-												src={nadia4}
+												src={nadia3}
 												alt="image"
 												className="object-contain border-black border-2 rounded-xl"
 												width={500}
@@ -194,7 +194,9 @@ export default function Farah() {
 							<p className="text-[8vw] md:text-[3vw] text-center font-bold ">
 								Cuna Di Sisi, Semua Happy 🫶
 							</p>
-							<p className="text-[4vw] md:text-[2vw] font-semibold">Code: 101</p>
+							<p className="text-[4vw] md:text-[2vw] font-semibold">
+								Code: <span className="font-mono">I01</span>
+							</p>
 						</div>
 						<div className="flex flex-wrap justify-center gap-3 md:mb-0 mb-20 md:mt-0 mt-10">
 							<Badge variant="default" className="md:text-lg bg-red-500">

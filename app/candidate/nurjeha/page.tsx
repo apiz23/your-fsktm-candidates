@@ -7,6 +7,7 @@ import Image from "next/image";
 import nurjeha1 from "@/public/images/Nurjeha/1.jpg";
 import nurjeha2 from "@/public/images/Nurjeha/2.jpg";
 import nurjeha3 from "@/public/images/Nurjeha/3.jpg";
+import nurjeha4 from "@/public/images/Nurjeha/4.jpg";
 import { X } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -142,6 +143,28 @@ export default function Farah() {
 									<Dialog>
 										<DialogTrigger className="p-3">
 											<Image
+												src={nurjeha4}
+												alt="image"
+												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
+												width={500}
+												height={500}
+											/>
+										</DialogTrigger>
+										<DialogContent>
+											<Image
+												src={nurjeha4}
+												alt="image"
+												className="object-contain border-black border-2 rounded-xl"
+												width={500}
+												height={500}
+											/>
+										</DialogContent>
+									</Dialog>
+								</CarouselItem>
+								<CarouselItem className="md:basis-1/2">
+									<Dialog>
+										<DialogTrigger className="p-3">
+											<Image
 												src={nurjeha3}
 												alt="image"
 												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
@@ -171,7 +194,9 @@ export default function Farah() {
 							<p className="text-[8vw] md:text-[3vw] text-center font-bold ">
 								Aspirasi Merealisasi Realiti ✨
 							</p>
-							<p className="text-[4vw] md:text-[2vw] font-semibold">Code: 102</p>
+							<p className="text-[4vw] md:text-[2vw] font-semibold">
+								Code: <span className="font-mono">I02</span>
+							</p>
 						</div>
 						<div className="flex flex-wrap justify-center gap-3 md:mb-0 mb-20 md:mt-0 mt-10">
 							<Badge variant="default" className="md:text-lg bg-red-500">

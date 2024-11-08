@@ -170,7 +170,9 @@ export default function Farah() {
 							<p className="text-[8vw] md:text-[3vw] text-center font-bold ">
 								Do Not Spoil What You Have 😎
 							</p>
-							<p className="text-[4vw] md:text-[2vw] font-semibold">Code: 104</p>
+							<p className="text-[4vw] md:text-[2vw] font-semibold">
+								Code: <span className="font-mono">I04</span>
+							</p>
 						</div>
 						<div className="flex flex-wrap justify-center gap-3 mb-20 mt-10">
 							<Badge variant="default" className="md:text-lg bg-red-500">

@@ -6,6 +6,7 @@ import Lenis from "@studio-freight/lenis";
 import Image from "next/image";
 import zuhayra1 from "@/public/images/Zuhayra/1.jpg";
 import zuhayra2 from "@/public/images/Zuhayra/2.jpg";
+import zuhayra3 from "@/public/images/Zuhayra/3.jpg";
 import { InstagramIcon, X } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -111,11 +112,11 @@ export default function Farah() {
 				<div className="fixed top-[-10vh] left-0 h-[120vh] w-ful grid grid-cols-1 md:grid-cols-12 md:px-10">
 					<motion.div
 						style={{ y: y2 }}
-						className="col-span-6 flex items-center justify-center md:p-10 p-4 gap-4"
+						className="col-span-7 flex items-center justify-center md:p-10 p-4 gap-4"
 					>
 						<Carousel>
 							<CarouselContent className="md:pt-0 pt-32 md:px-0 px-8">
-								<CarouselItem>
+								<CarouselItem className="md:basis-1/2">
 									<Dialog>
 										<DialogTrigger className="p-3">
 											<Image
@@ -137,18 +138,42 @@ export default function Farah() {
 										</DialogContent>
 									</Dialog>
 								</CarouselItem>
+								<CarouselItem className="md:basis-1/2">
+									<Dialog>
+										<DialogTrigger className="p-3">
+											<Image
+												src={zuhayra3}
+												alt="image"
+												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
+												width={500}
+												height={500}
+											/>
+										</DialogTrigger>
+										<DialogContent>
+											<Image
+												src={zuhayra3}
+												alt="image"
+												className="object-contain border-black border-2 rounded-xl"
+												width={500}
+												height={500}
+											/>
+										</DialogContent>
+									</Dialog>
+								</CarouselItem>
 							</CarouselContent>
 							<CarouselPrevious />
 							<CarouselNext />
 						</Carousel>
 					</motion.div>
 
-					<div className="col-span-6 md:flex md:flex-col justify-center text-center px-10">
+					<div className="col-span-5 md:flex md:flex-col justify-center text-center px-10">
 						<div className="uppercase space-y-4 mb-10 text-white">
 							<p className="text-[8vw] md:text-[3vw] text-center font-bold ">
 								Inspire Your Desire 💪
 							</p>
-							<p className="text-[4vw] md:text-[2vw] font-semibold">Code: 103</p>
+							<p className="text-[4vw] md:text-[2vw] font-semibold">
+								Code: <span className="font-mono">I03</span>
+							</p>
 						</div>
 						<div className="flex flex-wrap justify-center gap-3 md:mb-0 mb-20 md:mt-0 mt-10">
 							<Badge variant="default" className="md:text-lg bg-red-500">
