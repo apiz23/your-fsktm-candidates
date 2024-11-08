@@ -36,7 +36,7 @@ export default function Home() {
 		};
 	}, []);
 
-	const targetDate = new Date("2024-11-14T10:00:00").getTime();
+	const targetDate = new Date("2024-11-14T08:00:00").getTime();
 
 	const [timeLeft, setTimeLeft] = useState({
 		days: 0,
