@@ -110,6 +110,17 @@ function Nav({ onLinkClick }: NavProps) {
 							{data.title}
 						</Link>
 					))}
+
+					<Link
+						href={`${process.env.NEXT_PUBLIC_BASE_URL}/creator`}
+						className={`text-white font-light text-lg md:text-5xl mb-5 hover:underline hover:text-green-500 ${
+							selectedIndicator === "/creator" ? "font-bold underline" : ""
+						}`}
+						onMouseEnter={() => setSelectedIndicator("/creator")}
+						onClick={onLinkClick}
+					>
+						Creator
+					</Link>
 				</div>
 			</div>
 			<Curve />
