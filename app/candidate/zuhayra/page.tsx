@@ -7,6 +7,7 @@ import Image from "next/image";
 import zuhayra1 from "@/public/images/Zuhayra/1.jpg";
 import zuhayra2 from "@/public/images/Zuhayra/2.jpg";
 import zuhayra3 from "@/public/images/Zuhayra/3.jpg";
+import zuhayra4 from "@/public/images/Zuhayra/4.jpg";
 import { X } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -152,6 +153,28 @@ export default function Farah() {
 										<DialogContent>
 											<Image
 												src={zuhayra3}
+												alt="image"
+												className="object-contain border-black border-2 rounded-xl"
+												width={500}
+												height={500}
+											/>
+										</DialogContent>
+									</Dialog>
+								</CarouselItem>
+								<CarouselItem className="md:basis-1/2">
+									<Dialog>
+										<DialogTrigger className="p-3">
+											<Image
+												src={zuhayra4}
+												alt="image"
+												className="object-cover rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
+												width={500}
+												height={500}
+											/>
+										</DialogTrigger>
+										<DialogContent>
+											<Image
+												src={zuhayra4}
 												alt="image"
 												className="object-contain border-black border-2 rounded-xl"
 												width={500}

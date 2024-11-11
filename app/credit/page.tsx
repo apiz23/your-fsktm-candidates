@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"; 
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Credit() {
 	return (
 		<div className="min-h-screen bg-gray-200 flex flex-col justify-center items-center p-6">
 			<div className="text-center mb-8">
-				<p className="text-3xl font-semibold text-gray-800">Credits</p>
+				<h2 className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0">
+					Credits
+				</h2>
 				<p className="text-xl text-muted-foreground mt-2">
 					DI230052 | AA210392 | MJ195345 | JG160007
 				</p>
