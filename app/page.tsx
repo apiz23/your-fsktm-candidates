@@ -50,6 +50,12 @@ export default function Home() {
 			const now = new Date().getTime();
 			const difference = targetDate - now;
 
+			if (difference <= 0) {
+				setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+				clearInterval(interval);
+				return;
+			}
+
 			const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 			const hours = Math.floor(
 				(difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -58,14 +64,11 @@ export default function Home() {
 			const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
 			setTimeLeft({ days, hours, minutes, seconds });
-
-			if (difference <= 0) {
-				clearInterval(interval);
-			}
 		}, 1000);
 
 		return () => clearInterval(interval);
 	}, [targetDate]);
+
 	return (
 		<>
 			<div className="flex flex-col overflow-hidden bg-gradient-to-b from-slate-300 via-red-100 to-blue-400">
